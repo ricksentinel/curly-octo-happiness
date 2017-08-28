@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+	table{
+		border: 1px solid grey;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: grey;
+		width: 50%;
+		text-align: center; 
+	}
+	th{
+		background-color: grey;
+		color: white;
+		font-weight: bold;
+		font-size: 150%;
+	}
+	td{
+		border: 1px solid grey;
+		background-color: white;
+		font-size: 125%;
+	}
+	
+</style>
+
+<title>Lojin do Julin</title>
+</head>
+<body>
+	<table cellspacing="1">
+  <thead>
+    <tr id="headerT">
+      <th th:text="Nomezin">Nome</th>
+      <th th:text="Precin">Preco</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="prod: ${products}">
+      <td th:text="${prod.nome}"></td>
+      <td th:text="${#numbers.formatDecimal(prod.preco, 1, 2)}"></td>
+    </tr>
+  </tbody>
+	</table>
+</body>
+</html>
