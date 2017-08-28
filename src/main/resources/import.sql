@@ -1,4 +1,10 @@
-insert into Produtos(nome,preco) values('teste',1.22);
-insert into Produtos(nome,preco) values('mais um',1.5);
-
-
+insert into Produtos(nome,preco) values('Maçãzin',1.99);
+insert into Produtos(nome,preco) values('Bananin',2.5);
+insert into Produtos(nome,preco) values('Chuchuzin',3.99);
+insert into Produtos(nome,preco) values('Cenourin',6.5);
+insert into Produtos(nome,preco) values('Tomatin',15.99);
+insert into Produtos(nome,preco) values('Alfacin',28.5);
+insert into Produtos(nome,preco) values('Abacatin',6.99);
+insert into Produtos(nome,preco) values('Uva',2.45);
+insert into Produtos(nome,preco) values('Mandioquin',1.39);
+insert into Produtos(nome,preco) values('Mãezin do Fredin',0.01);
