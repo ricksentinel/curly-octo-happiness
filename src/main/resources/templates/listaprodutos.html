@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org">
+ <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <style>
 	table{
@@ -31,14 +31,16 @@
 	<table cellspacing="1">
   <thead>
     <tr id="headerT">
-      <th th:text="Nomezin">Nome</th>
-      <th th:text="Precin">Preco</th>
+    	<th th:text="Codigozin">id</th>
+      	<th th:text="Nomezin">Nome</th>
+      	<th th:text="Precin">Preco</th>
     </tr>
   </thead>
   <tbody>
     <tr th:each="prod: ${products}">
-      <td th:text="${prod.nome}"></td>
-      <td th:text="${#numbers.formatDecimal(prod.preco, 1, 2)}"></td>
+    	<td th:text="${prod.id}"></td>
+      	<td th:text="${prod.nome}"></td>
+      	<td th:text="${#numbers.formatDecimal(prod.preco, 1, 2)}"></td>
     </tr>
   </tbody>
 	</table>
