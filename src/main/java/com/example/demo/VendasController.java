@@ -6,11 +6,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @Controller
 public class VendasController {
@@ -39,6 +41,21 @@ public class VendasController {
 	public Iterable<Venda> consultarVendas(){
 		return vr.findAll();
 	}
+	
+	
+	@GetMapping("/produtos/cadastro")
+    public String produtoForm(Model model) {
+        model.addAttribute("produtoNovo", new Produto());
+        return "cadastraprodutos";
+    }
+	
+	@PostMapping("/produtos/cadastro")
+	public String produtoCadastro(@ModelAttribute Produto prod, Model model) {
+		Produto novoPr = pr.save(prod);
+		return "redirect:/listaprodutos";
+	}
+	
+	
 	
 	@GetMapping("/vendas/{id}")
 	public ResponseEntity<Venda> consultaVenda(@PathVariable("id") int id){

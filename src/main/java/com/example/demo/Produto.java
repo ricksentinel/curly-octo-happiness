@@ -1,6 +1,8 @@
 package com.example.demo;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="Produtos")
@@ -9,7 +11,10 @@ public class Produto {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	@NotNull
+	@Size(min=2)
 	private String nome;
+	@NotNull
 	private double preco;
 	
 	public Produto() {
