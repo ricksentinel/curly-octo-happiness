@@ -32,7 +32,29 @@
        	</style>
     </head>
     <body>
-        
+        <header>
+		<table cellspacing="2">
+			<th margin="0%">
+				<form action='/listaprodutos'>
+            	
+            	<input class="botoes" type="submit" value="Produtos"/>
+       	 		</form>
+			</th>
+			<th>
+				<a href="/">
+				
+				</a>
+			</th>
+			<!-- <th id="areaLogin">
+				<form th:action="@{/login}" method="post">
+            	<label> Username : <input type="text" name="username"/> 
+            	 Password: <input type="password" name="password"/> </label>
+            	<input id="botao" type="submit" value="Sign In"/>
+       	 		</form>
+			</th> -->
+		</table>
+
+	</header>
         <div id="loginSection">
         <form th:action="@{/login}" method="post">
             <label> Username : <input type="text" name="username"/> </label><br/>

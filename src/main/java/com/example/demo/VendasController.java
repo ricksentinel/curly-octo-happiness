@@ -50,8 +50,8 @@ public class VendasController {
     }
 	
 	@PostMapping("/produtos/cadastro")
-	public String produtoCadastro(@ModelAttribute Produto prod, Model model) {
-		Produto novoPr = pr.save(prod);
+	public String produtoCadastro(@ModelAttribute Produto produtoNovo, Model model) {
+		Produto novoPr = pr.save(produtoNovo);
 		return "redirect:/listaprodutos";
 	}
 	

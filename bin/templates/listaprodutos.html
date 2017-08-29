@@ -4,6 +4,11 @@
  
 <head>
 <style>
+	header{
+    		background-color: #EEF;
+    		margin-bottom: ;
+    		
+    }
 	table{
 		border: 1px solid grey;
 		margin-left: auto;
@@ -24,24 +29,48 @@
 		font-size: 125%;
 	}
 	
+	
 </style>
 
 <title>Lojin do Julin</title>
 </head>
 <body> 
-	<header>
+	<!-- <header>
+		<table  cellspacing="2">
+			<th margin="0%">
+				<form action="/listaprodutos">
+            	
+            	<input class="botoes" type="button" value="Produtos"/>
+       	 		</form>
+			</th>
+			<th>
+				<a href="/">
+				
+				</a>
+			</th>
+			<th>
+			<p th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</p>
+
+        	<form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        	</form>
+        	</th>
+		</table>
+
+	</header> -->
+	<!-- <header>
         <p th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</p>
 
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
-        </header>
-	<table cellspacing="1">
+        </header> -->
+	<table cellspacing="1" id="prodTable">
   <thead>
     <tr id="headerT">
-    	<th width="15%" th:text="Codigozin">id</th>
-      	<th th:text="Nomezin">Nome</th>
-      	<th width="10%" th:text="Precin">Preco</th>
+    	<th class="prodHeader" width="15%" th:text="Codigozin">id</th>
+      	<th class="prodHeader" th:text="Nomezin">Nome</th>
+      	<th class="prodHeader" width="10%" th:text="Precin">Preco</th>
     </tr>
   </thead>
   <tbody>

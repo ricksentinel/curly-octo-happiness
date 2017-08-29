@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/> 
 <title>Cadastro de Produtos</title>
 </head>
 <body>
-	<form action="#" th:action="@{/produto/cadastro}" th:object="${greeting}" method="post">
-    	<p>Nome: <input type="text" th:field="*{id}" /></p>
-        <p>Preço: <input type="text" th:field="*{content}" /></p>
+	<form action="#" th:action="@{/produtos/cadastro}" th:object="${produtoNovo}" method="post">
+    	<p>Nome: <input type="text" th:field="*{nome}" /></p>
+        <p>PreÃ§o: <input type="text" th:field="*{preco}" /></p>
         <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
     </form>
 </body>
