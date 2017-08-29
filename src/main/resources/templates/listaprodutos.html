@@ -29,11 +29,13 @@
 <title>Lojin do Julin</title>
 </head>
 <body> 
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+	<header>
+        <p th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</p>
 
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
+        </header>
 	<table cellspacing="1">
   <thead>
     <tr id="headerT">

@@ -7,10 +7,18 @@
 
     	header{
     		background-color: #EEF;
+    		;
     	}
     	
     	th{
-    		
+    		border-right: 2px dashed #bad5d8;
+    		padding: 5px;
+    		padding-right: 10px;
+    		padding-left: 10px;
+    	}
+    	
+    	table{
+    		width: 100%
     	}
     	
     	a{
@@ -18,22 +26,48 @@
     		color: grey;
     		font-weight: bold;
     	}
-    	img{
-    		align: center;
+    	
+    	#areaLogin{
+    		padding-left: 50%;
     	}
+    	
+    	.botoes{
+    		background-color: #EEF;
+    		color: grey;
+    		font-weight: bold;
+    		width: 100%;
+    		height: 150%;
+    	}
+    	
+    	
+
     </style>
 </head>
 <body>
 	<header>
 		<table cellspacing="2">
+			<th margin="0%">
+				<form action="/listaprodutos">
+            	
+            	<input class="botoes" type="submit" value="Produtos"/>
+       	 		</form>
+			</th>
 			<th>
-				<a href="/listaprodutos">
-					Produtos
+				<a href="/">
+				
 				</a>
 			</th>
+			<th id="areaLogin">
+				<form th:action="@{/login}" method="post">
+            	<label> Username : <input type="text" name="username"/> 
+            	 Password: <input type="password" name="password"/> </label>
+            	<input id="botao" type="submit" value="Sign In"/>
+       	 		</form>
+			</th>
 		</table>
+
 	</header>
-	<center><img src="https://www2.pic-upload.de/img/33714254/2.gif"></center>
+	 <center><img src="https://www2.pic-upload.de/img/33714254/2.gif"></center>
 	<form action='/listaprodutos'><br>
 
  		<center></center><input type="submit" value="Lista de Produtos"></center>
